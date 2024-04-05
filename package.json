@@ -1,0 +1,11 @@
+{
+  "name": "01-basic-html",
+  "version": "1.0.0",
+  "description": "Tarea de web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo",
+  "license": "ISC"
+}
