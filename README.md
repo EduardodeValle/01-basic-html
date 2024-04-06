@@ -1,3 +1,3 @@
 # 01-basic-html
 
-Esta es una actividad que muestra un sitio con mi información de contacto. Está hecha con HTML, CSS y JavaScript.
+This is an activity that shows a website with information about myself using HTML, CSS and JavaScript.
