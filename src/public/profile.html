@@ -22,21 +22,21 @@
 
     <form>
         <label for="asunto">Asunto:</label><br>
-        <input type="text" id="asunto" name="asunto"><br>
+        <input type="text" id="asunto" name="asunto" required><br>
 
         <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre"><br>
+        <input type="text" id="nombre" name="nombre" required><br>
 
         <label for="comentarios">Comentarios:</label><br>
-        <textarea id="comentarios" name="comentarios"></textarea><br>
+        <textarea id="comentarios" name="comentarios" required></textarea><br>
 
         <label for="correo">Correo electrónico:</label><br>
-        <input type="email" id="correo" name="correo"><br>
+        <input type="email" id="correo" name="correo" required><br>
 
         <label for="telefono">Número de teléfono:</label><br>
-        <input type="tel" id="telefono" name="telefono"><br>
+        <input type="tel" id="telefono" name="telefono" required><br>
 
-        <button type="submit">Enviar</button>
+        <button class="button" type="submit">Enviar</button>
     </form>
 
 </body>
