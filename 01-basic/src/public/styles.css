@@ -45,19 +45,12 @@ textarea {
     border-radius: 25px;
 }
 
-.gradient-text {
-    font-weight: bold;
-    font-size: 50px;
-    background: -webkit-linear-gradient(45deg, #00ddff, #00ff48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 label {
     font-size: 18px;
 }
 
 .main-container {
+    width: 100%;
     display: flex;
 }
 
