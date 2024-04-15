@@ -1,9 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
 #root {
+  display: flex;
+  flex-direction: column;
+  /* This makes the children stack vertically */
+  align-items: flex-start;
   max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
 
 .logo {
   height: 6em;
@@ -11,9 +20,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +33,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +51,122 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.button {
+  margin: 0 10px;
+  background-color: rgb(0, 98, 255);
+  color: white;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 85%;
+  height: auto;
+  border-radius: 25px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.main-container {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #212121;
+  color: black;
+}
+
+.navbar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.text-container {
+  flex: 3;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-container p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.p-text {
+  font-size: 25px;
+}
+
+.right-images {
+  display: flex;
+}
+
+.right-images a {
+  margin-left: 10px;
 }
