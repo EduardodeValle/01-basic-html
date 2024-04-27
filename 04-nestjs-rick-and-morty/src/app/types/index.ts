@@ -1,4 +1,5 @@
 export interface Character {
+  id: number;
   name: string;
   status: string;
   species: string;
@@ -10,6 +11,7 @@ export interface Character {
 }
 
 export interface CharacterProps {
+  id: number | any;
   name: string | any;
   status: string | any;
   species: string | any;

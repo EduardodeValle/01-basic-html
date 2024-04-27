@@ -4,7 +4,5 @@ export async function fetchCharacters() {
 
   const result = await response.json();
 
-  // console.log(result.results.slice(0, 3));
-
   return result;
 }
