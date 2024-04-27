@@ -13,6 +13,7 @@ const CharacterDetails = () => {
 
   const [characterInfo, setCharacterInfo] = useState({
     id: 0,
+    isFavorite: false,
     name: "",
     status: "",
     species: "",
@@ -28,17 +29,6 @@ const CharacterDetails = () => {
       url: ""
     }
   });
-
-  // const [characterInfo, setCharacterInfo] = useState(null);
-
-  /*
-  const fetchCharacterInfo = async () => {
-    const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-    const result = await response.json();
-    setCharacterInfo(result.results);
-    // console.log(result.results.slice(0, 3));
-  }
-  */
 
   useEffect(() => {
     if (id) {
@@ -57,7 +47,7 @@ const CharacterDetails = () => {
       <div className="bg-white">
         <img src={characterInfo.image} alt="character image" width={300} height={300} className="rounded-xl object-cover" />
         <div className="p-2">
-          <h4 className="text-lg font-semibold truncate">{characterInfo.name} <ToggleHeart /></h4>
+          <h4 className="text-lg font-semibold truncate">{characterInfo.name} <ToggleHeart id={characterInfo.id} initialIsFavorite={characterInfo.isFavorite} /></h4>
           <div>
             <p className="text-sm text-gray-600 truncate">Type: {characterInfo.type}</p>
             <p className="text-sm text-gray-600 truncate">Gender: {characterInfo.gender}</p>

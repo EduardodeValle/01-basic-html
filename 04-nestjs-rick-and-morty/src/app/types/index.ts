@@ -1,5 +1,6 @@
 export interface Character {
   id: number;
+  isFavorite: boolean;
   name: string;
   status: string;
   species: string;
@@ -18,6 +19,7 @@ export interface Character {
 
 export interface CharacterProps {
   id: number | any;
+  isFavorite: boolean | any;
   name: string | any;
   status: string | any;
   species: string | any;

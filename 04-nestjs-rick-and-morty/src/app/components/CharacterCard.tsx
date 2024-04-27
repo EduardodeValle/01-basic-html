@@ -10,12 +10,12 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({ character }: CharacterCardProps) => {
-  const { id, name, status, species, location, image } = character;
+  const { id, name, status, species, location, image, isFavorite } = character;
   return (
     <div className="bg-white">
       <img src={image} alt="character image" width={300} height={300} className="rounded-xl object-cover" />
       <div className="p-2">
-        <h4 className="text-lg font-semibold truncate">{name} <ToggleHeart /></h4>
+        <h4 className="text-lg font-semibold truncate">{name} <ToggleHeart id={id} initialIsFavorite={isFavorite} /></h4>
         <div>
           <p className="text-sm text-gray-600 truncate">{status} - {species}</p>
           <p className="text-sm text-gray-600 break-words">Location: {location.name}</p>
