@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import CharacterCard from "../components/CharacterCard";
-import { Character } from "../types";
-import NavBar from "../components/navbar";
+import CharacterCard from "../../components/CharacterCard";
+import { Character } from "../../types";
+import NavBar from "../../components/navbar";
 
 export default function Home() {
   const [favoriteCharacters, setFavoriteCharacters] = useState<Character[]>([]);
