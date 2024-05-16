@@ -12,9 +12,9 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
   const { id, name, status, species, location, image, isFavorite } = character;
   return (
     <div className="bg-white">
-      <img
+      <Image
         src={image}
-        alt="character image"
+        alt="character"
         width={300}
         height={300}
         className="rounded-xl object-cover"

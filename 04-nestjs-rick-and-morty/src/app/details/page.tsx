@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -45,9 +46,9 @@ const CharacterDetails = () => {
     <div>
       <NavBar></NavBar>
       <div className="bg-white">
-        <img
+        <Image
           src={characterInfo.image}
-          alt="character image"
+          alt="character"
           width={300}
           height={300}
           className="rounded-xl object-cover"
