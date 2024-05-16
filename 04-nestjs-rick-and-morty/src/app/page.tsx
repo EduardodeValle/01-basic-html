@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-
 import CharacterCard from "../components/CharacterCard";
 import { Character } from "../types";
 import NavBar from "../components/navbar";
@@ -11,21 +10,25 @@ export default function Home() {
   const [allCharacters, setCharacters] = useState<Character[]>([]);
 
   const fetchCharacters = async () => {
-    const response = await fetch("https://rickandmortyapi.com/api/character?page=1");
+    const response = await fetch(
+      "https://rickandmortyapi.com/api/character?page=1",
+    );
     const result = await response.json();
 
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '{}');
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
 
     // Map through the fetched results and add an isFavorite property
-    const charactersWithFavorites = result.results.map((character: { id: number; }) => ({
-      ...character,
-      isFavorite: !!favorites[character.id]
-    }));
+    const charactersWithFavorites = result.results.map(
+      (character: { id: number }) => ({
+        ...character,
+        isFavorite: !!favorites[character.id],
+      }),
+    );
 
     setCharacters(result.results);
 
     setCharacters(charactersWithFavorites);
-  }
+  };
 
   useEffect(() => {
     fetchCharacters();

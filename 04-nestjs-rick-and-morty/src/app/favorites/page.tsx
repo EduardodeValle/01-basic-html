@@ -11,21 +11,25 @@ export default function Home() {
 
   useEffect(() => {
     const fetchFavoriteCharacters = async () => {
-      const favorites = JSON.parse(localStorage.getItem('favorites') || '{}');
+      const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
 
       // Gather all character IDs from favorites
-      const characterIds = Object.keys(favorites).map(key => parseInt(key, 10));
+      const characterIds = Object.keys(favorites).map((key) =>
+        parseInt(key, 10),
+      );
 
       // Fetch all characters based on these IDs
       const fetchedCharacters = await Promise.all(
         characterIds.map(async (id) => {
-          const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+          const response = await fetch(
+            `https://rickandmortyapi.com/api/character/${id}`,
+          );
           const data = await response.json();
           return {
             ...data,
-            isFavorite: true // Ensure the fetched characters are marked as favorites
+            isFavorite: true, // Ensure the fetched characters are marked as favorites
           };
-        })
+        }),
       );
 
       setFavoriteCharacters(fetchedCharacters);
