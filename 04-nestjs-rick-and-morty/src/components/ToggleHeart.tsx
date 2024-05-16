@@ -24,14 +24,21 @@ const ToggleHeart = ({ id, initialIsFavorite }: ToggleHeartProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // This checks if the code is running on the client
-      console.log(localStorage.getItem("favorites"));
-      const favorites = JSON.parse(localStorage.getItem("favorites") || "{}");
+      const favoritesJson = localStorage.getItem("favorites");
+      const favorites = JSON.parse(favoritesJson || "{}");
+
+      // Create a new object based on the existing favorites
+      let updatedFavorites = { ...favorites };
+
       if (isFilled) {
-        favorites[id] = true;
+        updatedFavorites[id] = true;
       } else {
-        delete favorites[id];
+        // Use destructuring to omit the property with the dynamic key (id)
+        const { [id]: omitted, ...remainingFavorites } = updatedFavorites;
+        updatedFavorites = remainingFavorites;
       }
-      localStorage.setItem("favorites", JSON.stringify(favorites));
+
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     }
   }, [isFilled, id]);
 
