@@ -18,20 +18,20 @@ export interface Character {
 }
 
 export interface CharacterProps {
-  id: number | any;
-  isFavorite: boolean | any;
-  name: string | any;
-  status: string | any;
-  species: string | any;
-  type: string | any;
-  gender: string | any;
-  image: string | any;
+  id: number;
+  isFavorite: boolean;
+  name: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  image: string;
   location: {
-    name: string | any;
-    url: string | any;
+    name: string;
+    url: string;
   };
   origin: {
-    name: string | any;
-    url: string | any;
+    name: string;
+    url: string;
   };
 }
