@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import ToggleHeart from "./ToggleHeart";
 
 import { CharacterProps } from "../types";

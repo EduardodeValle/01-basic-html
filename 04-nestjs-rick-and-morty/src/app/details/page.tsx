@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-import { Character } from "../../types";
 import NavBar from "../../components/navbar";
 import ToggleHeart from "../../components/ToggleHeart";
 
