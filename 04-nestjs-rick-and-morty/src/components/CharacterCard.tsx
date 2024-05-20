@@ -31,13 +31,13 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
             Location: {location.name}
           </p>
         </div>
-        <button className="mt-2">
-          <a
-            href={`/details?id=${id}`}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300 ease-in-out"
-          >
-            View Details
-          </a>
+        <button
+          className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300 ease-in-out"
+          onClick={() => {
+            window.location.href = `/details?id=${id}`;
+          }}
+        >
+          View Details
         </button>
       </div>
     </div>
